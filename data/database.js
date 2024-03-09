@@ -7,7 +7,7 @@ let database;
 
 const initDb = (callback) => {
     if(database){
-        console.log('Db is already initialiizes!');
+        console.log('Db is already initialiized!');
         return callback(null, database);
 
     }
