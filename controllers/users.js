@@ -21,11 +21,10 @@ const getSingle = async (req, res) => {
 const createUser = async (req, res) =>{
     const userId = new ObjectId(req.params.id);
     const user ={
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
         email: req.body.email,
-        favoriteColor: req.body.favoriteColor,
-        birthday: req.body.birthday
+        username:req.body.username,
+        name: req.body.name,
+        ipaddress: req.body.ipaddress 
     };
     const response = await mongodb.getDatabase().db().collection('users').insertOne(user);
     if (response.acknowledged) {
@@ -38,11 +37,10 @@ const createUser = async (req, res) =>{
 const updateUser = async (req, res) =>{
     const userId = new ObjectId(req.params.id);
     const user ={
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
         email: req.body.email,
-        favoriteColor: req.body.favoriteColor,
-        birthday: req.body.birthday
+        username:req.body.username,
+        name: req.body.name,
+        ipaddress: req.body.ipaddress 
     };
     const response = await mongodb.getDatabase().db().collection('users').replaceOne({_id: userId}, user);
     if (response.modifiedCOunt > 0) {
