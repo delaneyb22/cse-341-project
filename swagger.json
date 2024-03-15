@@ -5,10 +5,9 @@
     "description": "Users Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3001",
+  "host": "https://cse-341-project-gtbj.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
@@ -22,16 +21,7 @@
         }
       }
     },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
+   
     "/users/": {
       "get": {
         "description": "",
